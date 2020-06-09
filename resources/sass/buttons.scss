@@ -1,0 +1,63 @@
+.btn-primary {
+    @apply px-6 py-3 rounded bg-green-500 text-white text-sm font-bold whitespace-no-wrap;
+
+    &:hover {
+        @apply bg-green-600;
+    }
+    &:focus {
+        @apply bg-green-700;
+    }
+}
+
+.btn-secondary {
+    @apply px-6 py-3 rounded bg-gray-500 text-white text-sm font-bold whitespace-no-wrap;
+
+    &:hover {
+        @apply bg-gray-600;
+    }
+    &:focus {
+        @apply bg-gray-700;
+    }
+}
+
+.btn-danger {
+    @apply px-6 py-3 rounded bg-red-500 text-white text-sm font-bold whitespace-no-wrap;
+
+    &:hover,
+    &:focus {
+        @apply bg-red-600;
+    }
+}
+
+.btn-outline {
+    @apply px-6 py-3 rounded border-gray-500 border text-gray-600 text-sm font-bold whitespace-no-wrap;
+
+    &:hover,
+    &:focus {
+        @apply bg-gray-200 border-gray-800 text-gray-700;
+    }
+}
+
+.btn-spinner,
+.btn-spinner:after {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.btn-spinner {
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: .2em solid white;
+    border-right: .2em solid white;
+    border-bottom: .2em solid white;
+    border-left: .2em solid transparent;
+    transform: translateZ(0);
+    animation: spinning 1s infinite linear;
+}
+
+@keyframes spinning {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
