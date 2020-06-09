@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "rocketslab/laravel-livewire-template",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Larvel with Livewire scalfold template",
     "keywords": [
         "framework",
         "laravel"
