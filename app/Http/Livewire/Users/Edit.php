@@ -50,7 +50,7 @@ class Edit extends Component
 
         $this->emit('notify', [
             'type' => 'success',
-            'message' => 'Usuário atualizado'
+            'message' => __('members.notifications.user-updated')
         ]);
     }
 }

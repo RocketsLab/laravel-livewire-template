@@ -1,6 +1,6 @@
 <div>
     <div class="flex justify-between items-center mb-6">
-        <h1 class="font-bold text-3xl">Usuários</h1>
+        <h1 class="font-bold text-3xl">{{ __('members.titles.users') }}</h1>
         <div class="inline-flex space-x-2">
             <button class="btn-outline @if($showFilter) bg-green-200 text-green-600 @endif leading-none" wire:click="toggleFilter">
                 <span class="material-icons text-base font-bold">
@@ -8,17 +8,17 @@
                 </span>
             </button>
             <a class="btn-primary ml-auto" href="{{ route('users.create') }}">
-                <span>Novo</span>
-                <span class="hidden md:inline">Usuário</span>
+                <span>{{ __('members.titles.new') }}</span>
+                <span class="hidden md:inline">{{ __('members.titles.user') }}</span>
             </a>
         </div>
     </div>
     @if($showFilter)
         <div class="mb-4 inline-flex space-x-2 w-1/2">
-            <input placeholder="Busque pelo nome ou email do usuário" type="text" class="form-input" wire:model="search">
+            <input placeholder="{{ __('members.placeholders.search')}}" type="text" class="form-input" wire:model="search">
             <button class="btn-primary flex items-center" wire:click="clear">
                 <span class="material-icons mr-2 leading-none text-base">clear</span>
-                Limpar
+                {{ __('members.buttons.clear-search') }}
             </button>
         </div>
     @endif
@@ -27,7 +27,7 @@
         @if(count($users))
             <table class="w-full whitespace-no-wrap">
                 <tr class="text-left font-bold bg-gray-100">
-                    <th class="px-6 py-6">Usuário</th>
+                    <th class="px-6 py-6">{{ __('members.titles.user') }}</th>
                     <th class="px-6 py-6"></th>
                 </tr>
                 @foreach($users as $user)
@@ -45,7 +45,7 @@
                 @endforeach
             </table>
         @else
-            <x-empty-list class="mt-4" title="Não há usuários" subtitle="Cadastre um usuário ou modifique a busca." icon="person"></x-empty-list>
+            <x-empty-list class="mt-4" title="{{ __('members.notices.no-users') }}" subtitle="{{ __('members.actions.register-or-modify') }}" icon="person"></x-empty-list>
         @endif
     </x-card>
     {{ $users->links() }}

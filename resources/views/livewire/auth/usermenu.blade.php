@@ -1,5 +1,5 @@
 <div>
     <button class="btn-primary" wire:click="logout">
-        Sair
+        {{ __('members.buttons.logout') }}
     </button>
 </div>

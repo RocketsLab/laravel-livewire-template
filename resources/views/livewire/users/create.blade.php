@@ -1,26 +1,22 @@
 <div>
     <h1 class="mb-8 font-bold text-3xl">
         <a href="{{ route('users.index') }}" class="text-green-400 hover:text-green-700">
-            Usuários
+            {{ __('members.titles.users' )}}
         </a>
         <span class="text-3xl font-bold mx-2">/</span>
         <span class="text-3xl font-bold">
-            Novo Usuário
+            {{ __('members.titles.new-user') }}
         </span>
     </h1>
     <div class="flex flex-1">
         <div class="hidden lg:block lg:w-3/12 pr-16">
-            <h2 class="text-2xl font-bold mb-4 pb-2 border-b">#Dica</h2>
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b">#{{ __('members.titles.tip') }}</h2>
             <p class="text-normal text-gray-700 leading-tight mb-8">
-                Preencha os dados do fornecedor e verifique os campos marcados com <span
-                    class="text-green-400 font-bold">*</span>
-                pois são campos obrigatórios.
+                {!! html_entity_decode(__('members.tips.users-edit')) !!}
             </p>
-            <h2 class="text-2xl font-bold mb-4 pb-2 border-b">Lorem ipsum</h2>
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b">{{ __('members.titles.lorem-ipsum') }}</h2>
             <p class="text-normal text-gray-700 leading-tight mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam assumenda aut autem
-                consequuntur dolorum ducimus et fuga fugiat labore molestiae qui quia temporibus, ullam vitae voluptate,
-                voluptates? Molestiae, rem.
+                {{ __('members.tips.lorem-ipsum') }}
             </p>
         </div>
         <!-- FORM -->
@@ -30,7 +26,7 @@
                 <x-slot name="footer">
                     <button class="btn-primary flex items-center" type="submit">
                         <span class="material-icons mr-2 leading-none">save</span>
-                        Salvar usuário
+                        {{ __('members.buttons.save-user') }}
                     </button>
                 </x-slot>
             </x-card>

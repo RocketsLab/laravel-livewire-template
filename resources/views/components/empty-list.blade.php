@@ -1,6 +1,6 @@
 @props([
     'icon' => 'list',
-    'title' => 'Não há items',
+    'title' => __('members.notices.no-items'),
     'subtitle' => ''
 ])
 

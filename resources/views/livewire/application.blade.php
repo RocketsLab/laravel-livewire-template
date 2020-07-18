@@ -1,3 +1,3 @@
 <div>
-    Dashboard Livewire
+    {{ __('members.titles.app') }}
 </div>

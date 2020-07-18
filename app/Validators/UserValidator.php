@@ -18,13 +18,13 @@ class UserValidator extends Validator
     public static function messages(): array
     {
         return [
-            'name.required' => 'Insira o nome',
-            'email.required' => 'Informe o email',
-            'email.email' => 'Email inválido',
-            'email.unique' => 'Email já cadastrado',
-            'password.required' => 'Insira uma senha',
-            'password.min' => 'A senha deve conter no mínimo 8 caracteres',
-            'password.confirmed' => 'As senhas não coincidem'
+            'name.required' => __('members.errors.name-required'),
+            'email.required' => __('members.errors.email-required'),
+            'email.email' => __('members.errors.email-email'),
+            'email.unique' => __('members.errors.email-unique'),
+            'password.required' => __('members.errors.password-required'),
+            'password.min' => __('members.errors.password-min'),
+            'password.confirmed' => __('members.errors.password-confirmed')
         ];
     }
 }
